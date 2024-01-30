@@ -15,7 +15,7 @@ python = "^3.9"
 loguru = "^0.7.2"
 
 [tool.poetry.group.dev.dependencies]
-pytest = "^7.1.2"
+pytest = ">=7.1.2,<9.0.0"
 pyright = "^1.1.349"
 pytest-cov = "^4.0.0"
 pytest-ruff = "^0.2.1"
