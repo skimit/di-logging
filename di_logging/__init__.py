@@ -34,7 +34,7 @@ class _InterceptHandler(logging.Handler):  # pragma: nocover
         logger.opt(depth=depth, exception=record.exc_info).log(level, record.getMessage())
 
 
-def get_logger(name: str):  # pylint: disable=unused-argument
+def get_logger(*args):
     """
     Retrieve a logger for a specific module (name).
 

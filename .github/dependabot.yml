@@ -9,7 +9,5 @@ updates:
       prefix: "GHM-00"
     reviewers:
       - "skimit/engineers"
-    registries:
-      - python-artifactory
     insecure-external-code-execution: allow
     open-pull-requests-limit: 2
