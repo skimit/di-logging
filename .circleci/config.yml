@@ -29,6 +29,11 @@ jobs:
     executor: circleci-orb/python-executor
     steps:
       - circleci-orb/build-package
+  push-package-pypi:
+    executor: circleci-orb/python-executor
+    steps:
+      - circleci-orb/push-package-pypi:
+          pipeline-number: << pipeline.number >>
   generate-changelog:
     executor: circleci-orb/base-executor
     steps:
@@ -67,6 +72,16 @@ workflows:
             - org-global
           requires:
             - generate-version
+      - push-package-pypi:
+          context:
+            - org-global
+          filters:
+            branches:
+              only:
+                - master
+          requires:
+            - build-package
+            - execute-tests
       - generate-changelog:
           context:
             - org-global
