@@ -34,11 +34,6 @@ jobs:
     steps:
       - circleci-orb/generate-changelog:
           pipeline-number: << pipeline.number >>
-  push-package:
-    executor: circleci-orb/base-executor
-    steps:
-      - circleci-orb/push-package:
-          pipeline-number: << pipeline.number >>
   create-github-release:
     executor: circleci-orb/base-executor
     steps:
