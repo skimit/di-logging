@@ -16,4 +16,3 @@ services:
 volumes:
   app_volume:
   venvs:
-
