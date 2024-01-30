@@ -9,7 +9,3 @@ jobs:
         uses: actions/checkout@v2
       - name: Python Dependency License Checker
         uses: skimit/pypi-license-checker-github-action@v1.1.2
-        env:
-          EXTRA_INDEX_URL: ${{ secrets.EXTRA_INDEX_URL }}
-          EXTRA_INDEX_URL_USERNAME: ${{ secrets.EXTRA_INDEX_URL_USERNAME }}
-          EXTRA_INDEX_URL_PASSWORD: ${{ secrets.EXTRA_INDEX_URL_PASSWORD }}
