@@ -67,11 +67,6 @@ ifdef REBUILD_FLAG
 	$(call ANNOUNCEMENT,Rebuilding docker image!)
 endif
 	$(call ANNOUNCEMENT,Starting dependencies...)
-	@touch auth.toml
-	@echo "[http-basic]" > auth.toml
-	@echo "[http-basic.artifactory]" >> auth.toml
-	@echo "username = \"${ARTIFACTORY_USERNAME}\"" >> auth.toml
-	@echo "password = \"${ARTIFACTORY_PULL}\"" >> auth.toml
 	@PROJECT_NAME=$(PROJECT_NAME) PORT=$(PORT) POETRY_LOCK_HASH=$(POETRY_LOCK_HASH) docker compose -p $(PROJECT_NAME) -f docker/docker-compose.yml up -d $(REBUILD_FLAG)
 endif
 endif
