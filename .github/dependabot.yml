@@ -1,0 +1,22 @@
+version: 2
+updates:
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    commit-message:
+      # Prefix all commit messages with "GHM-00"
+      prefix: "GHM-00"
+    reviewers:
+      - "skimit/development"
+    registries:
+      - python-artifactory
+    insecure-external-code-execution: allow
+    open-pull-requests-limit: 2
+registries:
+  python-artifactory:
+    type: python-index
+    url: https://deeperinsights.jfrog.io/artifactory/api/pypi/deeper-insights-pypi/simple/
+    username: rodger-readonly
+    password: ${{secrets.DEPENDABOT_EXTRA_INDEX_URL_PULL_TOKEN}}
+    replaces-base: false
