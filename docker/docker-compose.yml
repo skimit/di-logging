@@ -5,8 +5,6 @@ services:
     build:
       context: ..
       dockerfile: docker/Dev.Dockerfile
-      secrets:
-        - auth
     env_file: ../.env
     volumes:
     - ..:/usr/src/app
