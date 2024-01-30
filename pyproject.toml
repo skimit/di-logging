@@ -5,9 +5,6 @@ description = "Standard logging library for product"
 authors = []
 
 
-[[tool.poetry.source]]
-name = "artifactory"
-url = "https://deeperinsights.jfrog.io/artifactory/api/pypi/deeper-insights-pypi/simple"
 
 [tool.poetry.dependencies]
 python = "^3.9"
