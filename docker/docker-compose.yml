@@ -19,6 +19,3 @@ volumes:
   app_volume:
   venvs:
 
-secrets:
-  auth:
-    file: ../auth.toml
