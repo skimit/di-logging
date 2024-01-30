@@ -1,3 +1,7 @@
+# -=- encoding: utf-8 -=-
+#
+# Copyright (c) 2024 Deeper Insights. Subject to the MIT license
+
 """Factory methods for creating and configuring loggers."""
 import logging
 import os
@@ -34,7 +38,7 @@ class _InterceptHandler(logging.Handler):  # pragma: nocover
         logger.opt(depth=depth, exception=record.exc_info).log(level, record.getMessage())
 
 
-def get_logger(*args):
+def get_logger(name: str):  # pylint: disable=unused-argument
     """
     Retrieve a logger for a specific module (name).
 
