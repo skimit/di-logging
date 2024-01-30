@@ -25,15 +25,15 @@ This will setup the logging for the system.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The version is automatically changed accordingly to the commit message that results from merging the PR.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:point_right: `breaking-change/CAP-123` Something runs the pipeline and bumps major version: **1.0.0 → 2.0.0**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :point_right: `breaking-change/CAP-123` Something runs the pipeline and bumps major version: **1.0.0 → 2.0.0**
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:point_right: `feature/CAP-123 Something` runs the pipeline and bumps minor version: **1.0.0 → 1.1.0**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :point_right: `feature/CAP-123 Something` runs the pipeline and bumps minor version: **1.0.0 → 1.1.0**
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:point_right: `fix/CAP-123 Something` runs the pipeline and bumps patch version: **1.0.0 → 1.0.1**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :point_right: `fix/CAP-123 Something` runs the pipeline and bumps patch version: **1.0.0 → 1.0.1**
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:point_right: `CAP-123 Something` **just** runs the pipeline
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :point_right: `CAP-123 Something` **just** runs the pipeline
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:warning: If this flow is unclear to you, don't hesitate in contacting DevOps team :warning:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :warning: If this flow is unclear to you, don't hesitate in contacting DevOps team :warning:
 
 ## How to run locally
 
