@@ -159,7 +159,7 @@ sync-requirements:	### Syncs the installed dependencies with the ones defined on
 ifeq ($(strip $(PROJECT_INSTANCES)),0)
 	$(call ANNOUNCEMENT,Syncing project requirements...)
 	@docker image rm $(PROJECT_MAIN_DOCKER_IMAGE)
-	@PROJECT_NAME=$(PROJECT_NAME) PORT=$(PORT) ARTIFACTORY_USERNAME=$(ARTIFACTORY_USERNAME) ARTIFACTORY_PULL=$(ARTIFACTORY_PULL) POETRY_LOCK_HASH=$(POETRY_LOCK_HASH) docker compose -p $(PROJECT_NAME) -f docker/docker-compose.yml build
+	@PROJECT_NAME=$(PROJECT_NAME) PORT=$(PORT) POETRY_LOCK_HASH=$(POETRY_LOCK_HASH) docker compose -p $(PROJECT_NAME) -f docker/docker-compose.yml build
 else
 	$(call ANNOUNCEMENT,Error syncing $(PROJECT_NAME) requirements. Please stop all running dependencies and try again.)
 endif
