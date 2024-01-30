@@ -2,7 +2,7 @@
 
 Product logging library to provide consistent logging across components.
 
-Loggers can be obtained thusly;
+Loggers can be obtained thusly:
 ```python
 from di_logging import get_logger
 
@@ -21,19 +21,19 @@ if __name__ == "__main__":
 This will setup the logging for the system.
 
 ## Release Process
-:point_right: Includes a semantic release system, which generates a new release on GitHub, including a changelog.
+&#9755; Includes a semantic release system, which generates a new release on GitHub, including a changelog.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The version is automatically changed accordingly to the commit message that results from merging the PR.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :point_right: `breaking-change/CAP-123` Something runs the pipeline and bumps major version: **1.0.0 → 2.0.0**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#9755; `breaking-change/CAP-123` Something runs the pipeline and bumps major version: **1.0.0 → 2.0.0**
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :point_right: `feature/CAP-123 Something` runs the pipeline and bumps minor version: **1.0.0 → 1.1.0**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#9755; `feature/CAP-123 Something` runs the pipeline and bumps minor version: **1.0.0 → 1.1.0**
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :point_right: `fix/CAP-123 Something` runs the pipeline and bumps patch version: **1.0.0 → 1.0.1**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#9755; `fix/CAP-123 Something` runs the pipeline and bumps patch version: **1.0.0 → 1.0.1**
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :point_right: `CAP-123 Something` **just** runs the pipeline
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#9755; `CAP-123 Something` **just** runs the pipeline
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :warning: If this flow is unclear to you, don't hesitate in contacting DevOps team :warning:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#9888; If this flow is unclear to you, don't hesitate in contacting DevOps team &#9888;
 
 ## How to run locally
 
