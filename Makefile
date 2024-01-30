@@ -11,8 +11,6 @@ PROJECT_INSTANCES := $(shell docker ps | awk -v count=0 '/${PROJECT_NAME}/ {coun
 PROJECT_CONTAINERS := $(shell docker ps | awk '/${PROJECT_NAME}/ {print $$(NF)}')
 PROJECT_MAIN_DOCKER_IMAGE := $(shell docker images | awk '/${PROJECT_NAME}/ {print $$1}')
 ENV_FILE := $(shell test -e .env && echo 0 || echo -1)
-ARTIFACTORY_PULL := $(shell cat .env | grep -m 1 ARTIFACTORY_PULL | perl -n -e '/ARTIFACTORY_PULL=(.+)/ && print $$1')
-ARTIFACTORY_USERNAME := $(shell cat .env | grep -m 1 ARTIFACTORY_USERNAME | perl -n -e '/ARTIFACTORY_USERNAME=(.+)/ && print $$1')
 POETRY_LOCK_HASH := $(shell command -v sha1sum >/dev/null && echo $$(sha1sum pyproject.toml) | cut -d ' ' -f 1 || echo -1)
 
 FILES_CHANGED := $(strip $(foreach file, $(FILES_TO_CHECK_FOR_CHANGES), $(shell \
