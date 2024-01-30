@@ -25,7 +25,6 @@ COPY --from=golang-builder /go/bin/reflex /usr/local/bin/reflex
 RUN chmod +x /usr/local/bin/reflex
 
 COPY pyproject.toml *poetry.lock ./
-RUN --mount=type=secret,id=auth,target=/root/.config/pypoetry/auth.toml \
-    poetry install --no-interaction
+RUN poetry install --no-interaction
 
 ENTRYPOINT ["tail", "-f", "/dev/null"]
