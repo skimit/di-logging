@@ -8,7 +8,7 @@ updates:
       # Prefix all commit messages with "GHM-00"
       prefix: "GHM-00"
     reviewers:
-      - "skimit/development"
+      - "skimit/engineers"
     registries:
       - python-artifactory
     insecure-external-code-execution: allow
