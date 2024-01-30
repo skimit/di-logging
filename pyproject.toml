@@ -69,7 +69,6 @@ line-ending = "auto"
 known-first-party = ["di_logging"]
 section-order = ["future", "standard-library", "third-party", "first-party", "local-folder"]
 
-
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
