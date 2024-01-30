@@ -3,6 +3,12 @@ name = "di-logging"
 version = "0"
 description = "Standard logging library for product"
 authors = []
+license = "MIT"
+include = [
+    { path = "LICENSE", format = ["sdist", "wheel"] },
+    { path = "README.md", format = "sdist" },
+    { path = "tests", format = "sdist" }
+]
 
 [tool.poetry.dependencies]
 python = "^3.9"
