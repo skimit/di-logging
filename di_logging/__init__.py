@@ -70,7 +70,8 @@ def configure_logging(file_path: Optional[str] = None):
 
     This method needs to be called in the entry point of an application.
     It will configure the loguru logger and also intercept python logging and redirect
-    it to the loguru logger.
+    it to the loguru logger. It serialises logs in the production
+    environment.
 
     Usage:
     main.py
@@ -81,22 +82,32 @@ def configure_logging(file_path: Optional[str] = None):
             run_my_awesome_app()
     """
     level = os.environ.get("LOG_LEVEL", "DEBUG")
+    environment = os.environ.get("ENVIRONMENT", "development")
     logger.remove()
-    logger.add(
-        sys.stdout,
-        enqueue=True,
-        backtrace=True,
-        level=level.upper(),
-        format=LOGGER_FORMAT,
-    )
-    if file_path:
+    if environment == "development":
         logger.add(
-            file_path,
-            rotation="500 MB",
-            compression="zip",
-            level=level.upper(),
+            sys.stdout,
+            enqueue=True,
             backtrace=True,
+            level=level.upper(),
             format=LOGGER_FORMAT,
+        )
+        if file_path is not None:
+            logger.add(
+                file_path,
+                rotation="500 MB",
+                compression="zip",
+                level=level.upper(),
+                backtrace=True,
+                format=LOGGER_FORMAT,
+            )
+    else:
+        logger.add(
+            sys.stdout,
+            enqueue=True,
+            backtrace=True,
+            level=level.upper(),
+            serialize=True,
         )
 
     # add an intercept handler to the standard python logging so we get all logs to our logger
